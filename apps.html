@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apps - LutayIPAs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAV BAR -->
+    <nav>
+        <a href="index.html" class="nav-logo">📦 LutayIPAs</a>
+        <div class="nav-links">
+            <a href="apps.html" class="active">Apps</a>
+            <a href="games.html">Games</a>
+            <a href="tutorials.html">Tutorials</a>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <h2>📱 Apps</h2>
+        <p>Browse tweaked & modified applications</p>
+    </section>
+
+    <!-- SEARCH BAR -->
+    <div class="search-container">
+        <input type="text" id="searchBar" placeholder="🔍 Search apps..." onkeyup="searchItems()">
+    </div>
+
+    <!-- APP LIST -->
+    <section class="items-grid" id="itemsGrid">
+
+        <!-- EXAMPLE APP CARD (duplicate and modify for each app) -->
+        <div class="item-card" data-name="spotify premium">
+            <div class="item-icon">
+                <img src="https://via.placeholder.com/60" alt="App Icon">
+            </div>
+            <div class="item-info">
+                <h4>Spotify++</h4>
+                <p class="item-version">v8.8.0</p>
+                <p class="item-desc">Premium features unlocked</p>
+            </div>
+            <a href="YOUR_IPA_DOWNLOAD_LINK" class="download-btn">Download</a>
+        </div>
+
+        <!-- ANOTHER EXAMPLE -->
+        <div class="item-card" data-name="youtube premium">
+            <div class="item-icon">
+                <img src="https://via.placeholder.com/60" alt="App Icon">
+            </div>
+            <div class="item-info">
+                <h4>uYou+</h4>
+                <p class="item-version">v19.0</p>
+                <p class="item-desc">Ad-free YouTube with extras</p>
+            </div>
+            <a href="YOUR_IPA_DOWNLOAD_LINK" class="download-btn">Download</a>
+        </div>
+
+        <!-- ADD MORE APPS HERE -->
+
+    </section>
+
+    <!-- SEARCH SCRIPT -->
+    <script>
+        function searchItems() {
+            const query = document.getElementById('searchBar').value.toLowerCase();
+            const cards = document.querySelectorAll('.item-card');
+
+            cards.forEach(card => {
+                const name = card.getAttribute('data-name');
+                if (name.includes(query)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
