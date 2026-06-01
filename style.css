@@ -1,0 +1,159 @@
+/* ========== RESET & BASE ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0a0a0a;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ========== HEADER ========== */
+header {
+    text-align: center;
+    padding: 40px 20px 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    font-size: 2.5rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.tagline {
+    color: #888;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+/* ========== HERO ========== */
+.hero {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+.hero h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.hero p {
+    color: #aaa;
+    font-size: 1rem;
+}
+
+/* ========== CATEGORY CARDS ========== */
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 30px 20px 60px;
+    max-width: 900px;
+}
+
+.card {
+    background: #1a1a2e;
+    border: 1px solid #2a2a3e;
+    border-radius: 16px;
+    padding: 40px 30px;
+    width: 250px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #667eea;
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.2);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.card-arrow {
+    display: block;
+    margin-top: 16px;
+    font-size: 1.5rem;
+    color: #667eea;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-arrow {
+    transform: translateX(6px);
+}
+
+/* Card accent colors */
+.card-apps:hover { border-color: #4fc3f7; box-shadow: 0 12px 40px rgba(79, 195, 247, 0.2); }
+.card-apps .card-arrow { color: #4fc3f7; }
+
+.card-games:hover { border-color: #f06292; box-shadow: 0 12px 40px rgba(240, 98, 146, 0.2); }
+.card-games .card-arrow { color: #f06292; }
+
+.card-tutorials:hover { border-color: #81c784; box-shadow: 0 12px 40px rgba(129, 199, 132, 0.2); }
+.card-tutorials .card-arrow { color: #81c784; }
+
+/* ========== FOOTER ========== */
+footer {
+    margin-top: auto;
+    padding: 30px 20px;
+    text-align: center;
+    color: #555;
+    font-size: 0.85rem;
+}
+
+.disclaimer {
+    margin-top: 5px;
+    font-size: 0.75rem;
+    color: #444;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    header h1 { font-size: 2rem; }
+    .hero h2 { font-size: 1.4rem; }
+    .categories { flex-direction: column; align-items: center; }
+    .card { width: 90%; max-width: 320px; }
+}
