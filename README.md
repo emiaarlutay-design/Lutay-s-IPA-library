@@ -1,2 +1,2 @@
-# Lutay-s-IPA-library
+# Lutay's IPA library
 Ipa library from lutayjr
