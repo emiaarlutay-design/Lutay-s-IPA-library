@@ -1,2 +1,2 @@
 # Lutay's IPA library
-Ipa library from lutayjr
+LutayIPA library - Over 100+ IPAs!
